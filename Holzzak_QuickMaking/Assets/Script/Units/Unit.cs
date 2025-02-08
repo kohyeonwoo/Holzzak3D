@@ -10,10 +10,12 @@ public class Unit : MonoBehaviour
     protected int level;
 
     protected Animator anim;
-
+    protected Rigidbody rigid;
+    
     protected void Awake()
     {
         anim = GetComponent<Animator>();
+        rigid = GetComponent<Rigidbody>();
     }
 
     public virtual void Attack() { }

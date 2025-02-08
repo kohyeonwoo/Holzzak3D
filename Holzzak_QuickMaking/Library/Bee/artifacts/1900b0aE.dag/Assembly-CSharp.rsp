@@ -357,9 +357,11 @@
 -analyzer:"D:/ForUnity/UnitySource/Editor/2022.3.23f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Script/AudioManager/AudioManager.cs"
 "Assets/Script/AudioManager/Sound.cs"
+"Assets/Script/Camera/CameraShake.cs"
 "Assets/Script/GameManager/GameManager.cs"
 "Assets/Script/Interface/IDamageable.cs"
 "Assets/Script/ParticleManager/ParticleManager.cs"
+"Assets/Script/Units/BasicSoldier.cs"
 "Assets/Script/Units/Unit.cs"
 -langversion:9.0
 
