@@ -41,6 +41,12 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject enemyUnitSpawnLocation;
 
+    public GameObject playerAttackButton;
+
+    public GameObject playerDefenceButton;
+
+    public GameObject playerHitEffect;
+
     public Slider healthBar;
 
     public Slider enemyHealthBar;
@@ -75,6 +81,10 @@ public partial class GameManager : MonoBehaviour
 
         bEnemyUnitMove = false;
 
+        playerAttackButton.SetActive(false);
+
+        playerDefenceButton.SetActive(false);
+
         state = GameState.START;
 
         StartCoroutine(SetUp());
@@ -88,15 +98,37 @@ public partial class GameManager : MonoBehaviour
 
     IEnumerator SetUp()
     {
-
-
         yield return new WaitForSeconds(2.0f);
-        PlayerTurn();
+        SetTurn();
+    }
+
+    public void SetTurn()
+    {
+        int rand = Random.Range(1, 3);
+
+        if(rand == 1)
+        {
+            PlayerTurn();
+        }else
+        {
+            EnemyTurn();
+        }
     }
 
     private void PlayerTurn()
     {
         Debug.Log("현재 플레이어 차례");
+
+        playerAttackButton.SetActive(true);
+        playerDefenceButton.SetActive(false);
+    }
+
+    private void EnemyTurn()
+    {
+        Debug.Log("현재 적 차례");
+
+        playerAttackButton.SetActive(false);
+        playerDefenceButton.SetActive(true);
     }
 
     IEnumerator PlayerAttack()

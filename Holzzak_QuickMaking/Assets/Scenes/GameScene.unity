@@ -930,7 +930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &381818591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3218,6 +3218,8 @@ MonoBehaviour:
   enemyMaxHealth: 0
   bPlayerUnitMove: 0
   bEnemyUnitMove: 0
+  bPlayerDead: 0
+  bEnemyDead: 0
   state: 0
   unitList:
   - {fileID: 9060620202808653008, guid: 1b86a5b2eb4a7384c8216b4233ab9aa8, type: 3}
@@ -3244,6 +3246,9 @@ MonoBehaviour:
   - {fileID: 1215353654}
   - {fileID: 1651019208}
   enemyUnitSpawnLocation: {fileID: 0}
+  playerAttackButton: {fileID: 381818590}
+  playerDefenceButton: {fileID: 1936828515}
+  playerHitEffect: {fileID: 1719111697}
   healthBar: {fileID: 2088197578}
   enemyHealthBar: {fileID: 1623671562}
   costText: {fileID: 913071273}
