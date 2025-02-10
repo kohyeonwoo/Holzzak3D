@@ -19,6 +19,10 @@ public partial class GameManager : MonoBehaviour
 
     public int unitCount = 0;
 
+    public int enemyCount = 0;
+
+    public int playerNum = 0;
+
     public int enemyNum = 0;
 
     public float enemyHealth;
@@ -177,6 +181,11 @@ public partial class GameManager : MonoBehaviour
         }
     }
 
+    public void PlayerDefenceNum(int Num)
+    {
+        playerNum = Num;
+    }
+
     public void HandleHp()
     {
         healthBar.value = (float)health / (float)maxHealth;
@@ -200,18 +209,74 @@ public partial class GameManager : MonoBehaviour
                         unitCount++;
                         cost -= 1;
                         break;
+                  
                     case 1:
                         Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
                         limit++;
                         unitCount++;
                         cost -= 2;
                         break;
+                  
+                    case 2:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 3;
+                        break;
+                   
+                    case 3:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 4;
+                        break;
+                  
+                    case 4:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 5;
+                        break;
+                   
+                    case 5:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 6;
+                        break;
 
+                    case 6:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 7;
+                        break;
+
+                    case 7:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 8;
+                        break;
+
+                    case 8:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 9;
+                        break;
+
+                    case 9:
+                        Instantiate(unitList[Code], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        cost -= 10;
+                        break;
 
                     default:
                         break;
                 }
-            }
+           }
         }
         else
         {

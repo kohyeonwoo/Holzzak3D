@@ -361,7 +361,11 @@
 "Assets/Script/GameManager/GameManager.cs"
 "Assets/Script/Interface/IDamageable.cs"
 "Assets/Script/ParticleManager/ParticleManager.cs"
+"Assets/Script/Units/AntlerKnight.cs"
 "Assets/Script/Units/BasicSoldier.cs"
+"Assets/Script/Units/DogKnight.cs"
+"Assets/Script/Units/Magician.cs"
+"Assets/Script/Units/SpearMan.cs"
 "Assets/Script/Units/Unit.cs"
 -langversion:9.0
 

@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 4312686304526346660}
   - component: {fileID: 7805432060275325815}
   - component: {fileID: 8966551263166469438}
+  - component: {fileID: -1621535066238012495}
   m_Layer: 0
   m_Name: AntlerKnight
   m_TagString: Untagged
@@ -341,6 +342,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1621535066238012495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647032950606771490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4f8e2673d0ae84bbc52b8e888f8f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8542268186677451791
 GameObject:
   m_ObjectHideFlags: 0

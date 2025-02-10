@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 127
+  controlID: 132
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -376,7 +376,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cfbffff
+      m_ExpandedIDs: 46c3ffff4ac3ffff4ec3ffff2cfbffff8c5b0000aa5b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -769,9 +769,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 568.3557, y: 849.9179, z: -146.02461}
+    m_Target: {x: -5.4439335, y: -1.7986748, z: 3.2696915}
     speed: 2
-    m_Value: {x: 568.3557, y: 849.9179, z: -146.02461}
+    m_Value: {x: -5.4439335, y: -1.7986748, z: 3.2696915}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -817,13 +817,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.085059375, y: -0.026305359, z: -0.0022375158, w: -0.99603844}
+    m_Target: {x: 0.0439748, y: -0.95298135, z: 0.16928914, w: 0.24750818}
     speed: 2
-    m_Value: {x: 0.08505937, y: -0.026305359, z: -0.0022375158, w: -0.99603844}
+    m_Value: {x: 0.04397422, y: -0.95296884, z: 0.16928692, w: 0.24750493}
   m_Size:
-    m_Target: 788.88556
+    m_Target: 9.497174
     speed: 2
-    m_Value: 788.88556
+    m_Value: 9.497174
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -991,7 +991,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AssetCollection/Mini Legion Footman PBR HP Polyart
+    - Assets/Script/GameManager
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -999,16 +999,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/AssetCollection/Mini Legion Footman PBR HP Polyart
+  - Assets/Script/GameManager
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity_2025_Holzzak\GitArea\Holzzak3D\Holzzak_QuickMaking
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d8770000
-    m_LastClickedID: 30680
-    m_ExpandedIDs: 0000000026690000286900002c69000000ca9a3b
+    scrollPos: {x: 0, y: 429}
+    m_SelectedIDs: 408b0000
+    m_LastClickedID: 35648
+    m_ExpandedIDs: 000000005069000052690000546900005a690000726900007669000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1036,7 +1036,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026690000286900002a6900002c6900002e690000
+    m_ExpandedIDs: 00000000506900005269000054690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1136,6 +1136,9 @@ MonoBehaviour:
     - {fileID: -1383660406080406151, guid: 24b1de55b7dad2d41a0b9fb07b4b9625, type: 2}
     - {fileID: 4306377285501009033, guid: ea9867239a9d92a49b74478af2f55fb6, type: 2}
     - {fileID: -1288998843478133476, guid: d6ea60185ab111744971387f147d9282, type: 2}
+    - {fileID: 110700000, guid: 7ba94e2876338a04c805dce94e26ccd9, type: 2}
+    - {fileID: 1107905649089028422, guid: af24a924163d8d746be80b6e9e2581bb, type: 2}
+    - {fileID: 1107905649089028422, guid: b60dc9aa529b314489f628aa3b57c470, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
       e01: 0
@@ -1265,10 +1268,58 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1.3310447
+      e01: 0
+      e02: 0
+      e03: -225.62634
+      e10: 0
+      e11: 1.3310447
+      e12: 0
+      e13: -40.305237
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.5829384
+      e01: 0
+      e02: 0
+      e03: 297.85547
+      e10: 0
+      e11: 0.5829384
+      e12: 0
+      e13: 91.94786
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.5829384
+      e01: 0
+      e02: 0
+      e03: 297.85547
+      e10: 0
+      e11: 0.5829384
+      e12: 0
+      e13: 91.94786
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: ea9867239a9d92a49b74478af2f55fb6, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: af24a924163d8d746be80b6e9e2581bb, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 4306377285501009033, guid: ea9867239a9d92a49b74478af2f55fb6, type: 2}
+  - m_Target: {fileID: 1107905649089028422, guid: af24a924163d8d746be80b6e9e2581bb, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}

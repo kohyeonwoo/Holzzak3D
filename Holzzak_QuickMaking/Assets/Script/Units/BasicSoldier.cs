@@ -7,6 +7,7 @@ public class BasicSoldier : Unit
 
     private void Start()
     {
+        level = 1;
         attackPoint = 1;
     }
 
