@@ -19,7 +19,23 @@ public class Unit : MonoBehaviour
     }
 
     public virtual void Attack() { }
+
+    public void MoveForward()
+    {
+        anim.SetBool("bMove", true);
+        transform.Translate(Vector3.forward * 0.125f);
+    }
+
     public virtual void Die() { }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Opposite")
+        {
+            Destroy(this.gameObject);
+            GameManager.instance.enemyHealth -= attackPoint;
+            GameManager.instance.EnemyHandleHP();
+        }
+    }
 
 }

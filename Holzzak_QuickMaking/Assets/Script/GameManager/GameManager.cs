@@ -19,9 +19,19 @@ public partial class GameManager : MonoBehaviour
 
     public int unitCount = 0;
 
+    public int enemyNum = 0;
+
     public float enemyHealth;
 
     public float enemyMaxHealth;
+
+    public bool bPlayerUnitMove;
+
+    public bool bEnemyUnitMove;
+
+    public bool bPlayerDead;
+
+    public bool bEnemyDead;
 
     public GameState state;
 
@@ -47,8 +57,8 @@ public partial class GameManager : MonoBehaviour
 
     private void Start()
     {
-        state = GameState.START;
 
+       
         maxHealth = 50.0f;
 
         health = maxHealth;
@@ -61,6 +71,14 @@ public partial class GameManager : MonoBehaviour
 
         enemyHealthBar.value = (float)health / (float)maxHealth;
 
+        bPlayerUnitMove = false;
+
+        bEnemyUnitMove = false;
+
+        state = GameState.START;
+
+        StartCoroutine(SetUp());
+
     }
 
     private void Update()
@@ -68,78 +86,73 @@ public partial class GameManager : MonoBehaviour
         costText.text = cost.ToString();
     }
 
-    public void Battle()
-    {
-        int enemyNum = Random.Range(1, 11);
-    }
-
-    private void HandleHp()
-    {
-        healthBar.value = (float)health / (float)maxHealth;
-    }
-
-    private void EnemyHandleHP()
-    {
-        enemyHealthBar.value = (float)enemyHealth / (float)enemyMaxHealth;
-    }
-
-    IEnumerator PlayerAttack()
+    IEnumerator SetUp()
     {
 
-        bool isDead = false;
 
         yield return new WaitForSeconds(2.0f);
-
-        if(isDead)
-        {
-            state = GameState.WON;
-            EndBattle();
-        }
-        else
-        {
-            state = GameState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
-        }
-
-    }
-
-    IEnumerator EnemyTurn()
-    {
-        yield return new WaitForSeconds(1.0f);
-
-        bool isDead = true;
-
-        yield return new WaitForSeconds(1.0f);
-
-        if(isDead)
-        {
-            state = GameState.LOST;
-            EndBattle();
-        }
-        else
-        {
-            state = GameState.PLAYERTURN;
-            PlayerTurn();
-        }
-    }
-
-    private void EndBattle()
-    {
-        if(state == GameState.WON)
-        {
-            
-        }
-        else if(state == GameState.LOST)
-        {
-
-        }
+        PlayerTurn();
     }
 
     private void PlayerTurn()
     {
+        Debug.Log("현재 플레이어 차례");
+    }
+
+    IEnumerator PlayerAttack()
+    {
+        yield return new WaitForSeconds(2.0f);
+    }
+
+    public void OnAttackButton()
+    {
+        if(state != GameState.PLAYERTURN)
+        {
+            return;
+        }
+
+        StartCoroutine(PlayerAttack());
+    }
+
+    public void Battle()
+    {
+
+        enemyNum = Random.Range(1, 3);
+
+        if (enemyNum == GetPlayerNum())
+        {
+            Debug.Log("적의 승리");
+        }
+        else if (enemyNum != GetPlayerNum())
+        {
+            Debug.Log("플레이어의 승리");
+            bPlayerUnitMove = true;
+        }
+
+        Debug.Log("적의 수 : " + enemyNum);
 
     }
 
+    public int GetPlayerNum()
+    {
+        if(unitCount % 2 == 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+    public void HandleHp()
+    {
+        healthBar.value = (float)health / (float)maxHealth;
+    }
+    public void EnemyHandleHP()
+    {
+        enemyHealthBar.value = (float)enemyHealth / (float)enemyMaxHealth;
+    }
 
     public void SpawnUnit(int Code)
     {

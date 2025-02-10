@@ -9,4 +9,13 @@ public class BasicSoldier : Unit
     {
         attackPoint = 1;
     }
+
+    private void Update()
+    {
+        if(GameManager.instance.bPlayerUnitMove)
+        {
+            MoveForward();
+        }
+    }
+
 }
