@@ -3259,7 +3259,17 @@ MonoBehaviour:
   - {fileID: 68872814}
   - {fileID: 1215353654}
   - {fileID: 1651019208}
-  enemyUnitSpawnLocation: {fileID: 0}
+  enemyUnitSpawnLocation:
+  - {fileID: 2015439411}
+  - {fileID: 944415094}
+  - {fileID: 916019911}
+  - {fileID: 1315885856}
+  - {fileID: 1742012395}
+  - {fileID: 2002726978}
+  - {fileID: 1236674341}
+  - {fileID: 1955312402}
+  - {fileID: 1221265928}
+  - {fileID: 1645975944}
   playerAttackButton: {fileID: 381818590}
   playerDefenceButton: {fileID: 1936828515}
   playerHitEffect: {fileID: 1719111697}
