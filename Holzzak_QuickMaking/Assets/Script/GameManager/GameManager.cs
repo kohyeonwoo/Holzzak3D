@@ -93,8 +93,9 @@ public partial class GameManager : MonoBehaviour
 
         playerDefenceButton.SetActive(false);
 
-        state = GameState.START;
 
+
+        state = GameState.START;
         StartCoroutine(SetUp());
 
     }
@@ -125,14 +126,37 @@ public partial class GameManager : MonoBehaviour
 
     private void PlayerTurn()
     {
+        state = GameState.PLAYERTURN;
         Debug.Log("현재 플레이어 차례");
 
         playerAttackButton.SetActive(true);
         playerDefenceButton.SetActive(false);
     }
 
-    private void EnemyTurn()
+    IEnumerator EnemyTurn()
     {
+
+        yield return new WaitForSeconds(1.0f);
+
+        EnemyTurns();
+
+        if(health < 0)
+        {
+            state = GameState.LOST;
+            EndBattle();
+        }
+        else
+        {
+            state = GameState.PLAYERTURN;
+            PlayerTurn();
+        }
+
+    }
+
+
+    private void EnemyTurns()
+    {
+        state = GameState.ENEMYTURN;
         Debug.Log("현재 적 차례");
 
         playerAttackButton.SetActive(false);
@@ -141,10 +165,20 @@ public partial class GameManager : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
+        Battle();
 
         yield return new WaitForSeconds(2.0f);
 
-        Battle();
+        if(enemyHealth < 0)
+        {
+            state = GameState.WON;
+            EndBattle();
+        }
+        else
+        {
+            state = GameState.ENEMYTURN;
+            EnemyTurn();
+        }
 
     }
 
@@ -193,6 +227,17 @@ public partial class GameManager : MonoBehaviour
 
     }
 
+    private void EndBattle()
+    {
+        if(state == GameState.WON)
+        {
+            Debug.Log("플레이어 승리");
+        }
+        else if(state == GameState.LOST)
+        {
+            Debug.Log("상대방 승리");
+        }
+    }
 
     public int GetPlayerNum()
     {

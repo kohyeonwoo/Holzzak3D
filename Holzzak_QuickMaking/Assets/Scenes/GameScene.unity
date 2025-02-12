@@ -3224,6 +3224,7 @@ MonoBehaviour:
   maxHealth: 0
   cost: 5
   limit: 0
+  enemyLimit: 0
   unitCount: 0
   enemyCount: 0
   playerNum: 0
@@ -3248,6 +3249,7 @@ MonoBehaviour:
   - {fileID: 4054698208095089337, guid: a44d840823937fc4d8b15ff30e18ee23, type: 3}
   - {fileID: 7510819201635106618, guid: 11ff2560fad5660429927bbcd888cf8a, type: 3}
   - {fileID: 7647032950606771490, guid: f7c933584b6dc2e43915ca7c9bb5cb8a, type: 3}
+  unitClones: []
   playerUnitSpawnLocation:
   - {fileID: 359667990}
   - {fileID: 425567005}
@@ -3776,7 +3778,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1609545382}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Battle
+        m_MethodName: OnAttackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
