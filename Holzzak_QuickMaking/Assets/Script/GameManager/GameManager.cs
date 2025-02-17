@@ -41,6 +41,8 @@ public partial class GameManager : MonoBehaviour
 
     public GameState state;
 
+    public GameObject enemies;
+
     public List<GameObject> unitList = new List<GameObject>();
 
     public List<GameObject> unitClones = new List<GameObject>();
@@ -93,8 +95,6 @@ public partial class GameManager : MonoBehaviour
 
         playerDefenceButton.SetActive(false);
 
-
-
         state = GameState.START;
         StartCoroutine(SetUp());
 
@@ -120,7 +120,7 @@ public partial class GameManager : MonoBehaviour
             PlayerTurn();
         }else
         {
-            EnemyTurn();
+            EnemyTurns();
         }
     }
 
