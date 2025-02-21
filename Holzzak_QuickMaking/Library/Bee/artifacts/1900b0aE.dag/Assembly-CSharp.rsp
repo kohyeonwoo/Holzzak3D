@@ -358,6 +358,8 @@
 "Assets/Script/AudioManager/AudioManager.cs"
 "Assets/Script/AudioManager/Sound.cs"
 "Assets/Script/Camera/CameraShake.cs"
+"Assets/Script/Enemy/Enemy.cs"
+"Assets/Script/Enemy/Enemy_Ork.cs"
 "Assets/Script/GameManager/EnemyUnitPart_GameManager.cs"
 "Assets/Script/GameManager/GameManager.cs"
 "Assets/Script/GameManager/UnitPart_GameManager.cs"

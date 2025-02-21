@@ -13,10 +13,22 @@ public class BasicSoldier : Unit
 
     private void Update()
     {
+
         if(GameManager.instance.bPlayerUnitMove)
         {
             MoveForward();
         }
+
+        if(GameManager.instance.bPlayerUnitDestroy == true)
+        {
+            Dead();
+        }
+        
+    }
+
+    private void Dead()
+    {
+        Destroy(this.gameObject);
     }
 
 }

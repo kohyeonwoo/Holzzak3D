@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 581453348078528892}
   - component: {fileID: 7418878089526209995}
   - component: {fileID: 3397497441806062330}
+  - component: {fileID: -4348513554861314755}
   m_Layer: 0
   m_Name: Ork
   m_TagString: Opposite
@@ -252,7 +253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4054698208095089337}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7396311, z: 0, w: 0.67301255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -260,7 +261,7 @@ Transform:
   - {fileID: 6022390059700479390}
   - {fileID: 1671878920456149686}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 95.4, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &581453348078528892
 Animator:
   serializedVersion: 5
@@ -332,6 +333,18 @@ CapsuleCollider:
   m_Height: 2.35
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-4348513554861314755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054698208095089337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb55aa2b1eb97f4bb301068049cea29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4083627307582772633
 GameObject:
   m_ObjectHideFlags: 0

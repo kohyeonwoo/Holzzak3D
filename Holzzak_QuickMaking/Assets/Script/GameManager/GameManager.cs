@@ -33,7 +33,11 @@ public partial class GameManager : MonoBehaviour
 
     public bool bPlayerUnitMove;
 
+    public bool bPlayerUnitDestroy;
+
     public bool bEnemyUnitMove;
+
+    public bool bEnemyUnitDestroy;
 
     public bool bPlayerDead;
 
@@ -90,6 +94,10 @@ public partial class GameManager : MonoBehaviour
         bPlayerUnitMove = false;
 
         bEnemyUnitMove = false;
+
+        bPlayerUnitDestroy = false;
+
+        bEnemyUnitDestroy = false;
 
         playerAttackButton.SetActive(false);
 
@@ -168,6 +176,7 @@ public partial class GameManager : MonoBehaviour
         Battle();
 
         yield return new WaitForSeconds(2.0f);
+        //yield return new WaitForSeconds(0.5f);
 
         if(enemyHealth < 0)
         {
@@ -177,9 +186,27 @@ public partial class GameManager : MonoBehaviour
         else
         {
             state = GameState.ENEMYTURN;
-            EnemyTurn();
+            EnemyTurns();
         }
 
+    }
+
+    IEnumerator EnemyAttack()
+    {
+        Battle_Enemy();
+
+        yield return new WaitForSeconds(2.0f);
+
+        if (health < 0)
+        {
+            state = GameState.LOST;
+            EndBattle();
+        }
+        else
+        {
+            state = GameState.PLAYERTURN;
+            PlayerTurn();
+        }
     }
 
     public void OnAttackButton()
