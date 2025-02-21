@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 581453348078528892}
   - component: {fileID: 7418878089526209995}
   - component: {fileID: 3397497441806062330}
-  - component: {fileID: -4348513554861314755}
+  - component: {fileID: 3338031671870058545}
   m_Layer: 0
   m_Name: Ork
   m_TagString: Opposite
@@ -333,7 +333,7 @@ CapsuleCollider:
   m_Height: 2.35
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &-4348513554861314755
+--- !u!114 &3338031671870058545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4054698208095089337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb55aa2b1eb97f4bb301068049cea29, type: 3}
+  m_Script: {fileID: 11500000, guid: 49ee7d043028eab4e8f2ab7e35fa0878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4083627307582772633

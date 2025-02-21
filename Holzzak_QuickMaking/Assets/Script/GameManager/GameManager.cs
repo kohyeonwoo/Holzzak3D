@@ -193,6 +193,7 @@ public partial class GameManager : MonoBehaviour
 
     IEnumerator EnemyAttack()
     {
+
         Battle_Enemy();
 
         yield return new WaitForSeconds(2.0f);
@@ -211,12 +212,22 @@ public partial class GameManager : MonoBehaviour
 
     public void OnAttackButton()
     {
-        if(state != GameState.PLAYERTURN)
+        if((state != GameState.PLAYERTURN) && (unitCount <= 1))
         {
             return;
         }
 
         StartCoroutine(PlayerAttack());
+    }
+
+    public void OnAttackButton_Enemy()
+    {
+        if (state != GameState.ENEMYTURN)
+        {
+            return;
+        }
+
+        StartCoroutine(EnemyAttack());
     }
 
     public void Battle()

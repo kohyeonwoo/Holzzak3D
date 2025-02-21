@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: -1621535066238012495}
   m_Layer: 0
   m_Name: AntlerKnight
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

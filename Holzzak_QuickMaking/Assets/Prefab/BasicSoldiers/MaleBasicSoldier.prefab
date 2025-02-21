@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 1593327427076918787}
   m_Layer: 0
   m_Name: MaleBasicSoldier
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

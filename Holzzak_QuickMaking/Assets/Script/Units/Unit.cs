@@ -26,6 +26,8 @@ public class Unit : MonoBehaviour
         transform.Translate(Vector3.forward * 0.125f);
     }
 
+    public virtual void Heal() { }
+
     public virtual void Die() { }
 
     private void OnCollisionEnter(Collision collision)

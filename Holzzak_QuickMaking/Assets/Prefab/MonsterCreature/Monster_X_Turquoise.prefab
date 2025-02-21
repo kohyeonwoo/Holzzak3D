@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 3497367641764834311}
   m_Layer: 0
   m_Name: Monster_X_Turquoise
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

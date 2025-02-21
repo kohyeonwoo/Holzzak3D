@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: -8383871280693640899}
   m_Layer: 0
   m_Name: Magician_Blue
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
