@@ -78,7 +78,6 @@ public partial class GameManager : MonoBehaviour
     private void Start()
     {
 
-       
         maxHealth = 50.0f;
 
         health = maxHealth;
@@ -104,32 +103,12 @@ public partial class GameManager : MonoBehaviour
         playerDefenceButton.SetActive(false);
 
         state = GameState.START;
-        StartCoroutine(SetUp());
-
+       
     }
 
     private void Update()
     {
         costText.text = cost.ToString();
-    }
-
-    IEnumerator SetUp()
-    {
-        yield return new WaitForSeconds(2.0f);
-        SetTurn();
-    }
-
-    public void SetTurn()
-    {
-        int rand = Random.Range(1, 3);
-
-        if(rand == 1)
-        {
-            PlayerTurn();
-        }else
-        {
-            EnemyTurns();
-        }
     }
 
     private void PlayerTurn()
@@ -173,8 +152,7 @@ public partial class GameManager : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
-        Battle();
-
+        
         yield return new WaitForSeconds(2.0f);
         //yield return new WaitForSeconds(0.5f);
 
@@ -191,25 +169,6 @@ public partial class GameManager : MonoBehaviour
 
     }
 
-    IEnumerator EnemyAttack()
-    {
-
-        Battle_Enemy();
-
-        yield return new WaitForSeconds(2.0f);
-
-        if (health < 0)
-        {
-            state = GameState.LOST;
-            EndBattle();
-        }
-        else
-        {
-            state = GameState.PLAYERTURN;
-            PlayerTurn();
-        }
-    }
-
     public void OnAttackButton()
     {
         if((state != GameState.PLAYERTURN) && (unitCount <= 1))
@@ -218,51 +177,6 @@ public partial class GameManager : MonoBehaviour
         }
 
         StartCoroutine(PlayerAttack());
-    }
-
-    public void OnAttackButton_Enemy()
-    {
-        if (state != GameState.ENEMYTURN)
-        {
-            return;
-        }
-
-        StartCoroutine(EnemyAttack());
-    }
-
-    public void Battle()
-    {
-
-        enemyNum = Random.Range(1, 3);
-
-        if (enemyNum == GetPlayerNum())
-        {
-            EnemyTurn();
-            Debug.Log("상대방 방어 성공");
-        }
-        else if (enemyNum != GetPlayerNum())
-        {
-            Debug.Log("플레이어 예측 성공");
-            bPlayerUnitMove = true;
-        }
-
-        Debug.Log("적의 수 : " + enemyNum);
-
-    }
-
-    public void Battle_Enemy()
-    {
-        if (playerNum == GetEnemyNum())
-        {
-            PlayerTurn();
-            Debug.Log("상대방 방어 성공");
-        }
-        else if (playerNum != GetEnemyNum())
-        {
-            Debug.Log("플레이어 예측 성공");
-            bEnemyUnitMove = true;
-        }
-
     }
 
     private void EndBattle()
@@ -275,35 +189,6 @@ public partial class GameManager : MonoBehaviour
         {
             Debug.Log("상대방 승리");
         }
-    }
-
-    public int GetPlayerNum()
-    {
-        if(unitCount % 2 == 0)
-        {
-            return 0;
-        }
-        else
-        {
-            return 1;
-        }
-    }
-
-    public int GetEnemyNum()
-    {
-        if (enemyCount % 2 == 0)
-        {
-            return 0;
-        }
-        else
-        {
-            return 1;
-        }
-    }
-
-    public void PlayerDefenceNum(int Num)
-    {
-        playerNum = Num;
     }
 
     public void HandleHp()
