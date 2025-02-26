@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Opposite
   - Unit
+  - Enemy
   layers:
   - Default
   - TransparentFX

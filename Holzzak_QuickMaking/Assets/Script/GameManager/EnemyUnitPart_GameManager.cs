@@ -7,15 +7,15 @@ public partial class GameManager : MonoBehaviour
     public void EnemySpawnUnit()
     {
 
-        int rand = Random.Range(0, 6);
+        int rand = Random.Range(1, 6);
 
-        for(int i =0; i < rand; i++)
+        for(int i =1; i <= rand; i++)
         {
             if (enemyUnitSpawnLocation.Count >= enemyLimit)
             {
-                Instantiate(enemies, enemyUnitSpawnLocation[limit].transform.position, enemyUnitSpawnLocation[limit].transform.rotation);
-                limit++;
-                unitCount++;
+                Instantiate(enemies, enemyUnitSpawnLocation[enemyLimit].transform.position, enemyUnitSpawnLocation[enemyLimit].transform.rotation);
+                enemyLimit++;
+                enemyCount++;
             }
         }
 

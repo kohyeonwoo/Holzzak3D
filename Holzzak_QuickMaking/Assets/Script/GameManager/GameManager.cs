@@ -55,9 +55,7 @@ public partial class GameManager : MonoBehaviour
 
     public List<GameObject> enemyUnitSpawnLocation = new List<GameObject>();
 
-    public GameObject playerAttackButton;
-
-    public GameObject playerDefenceButton;
+    public GameObject playerChooseButton;
 
     public GameObject playerHitEffect;
 
@@ -98,10 +96,6 @@ public partial class GameManager : MonoBehaviour
 
         bEnemyUnitDestroy = false;
 
-        playerAttackButton.SetActive(false);
-
-        playerDefenceButton.SetActive(false);
-
         state = GameState.START;
        
     }
@@ -111,13 +105,28 @@ public partial class GameManager : MonoBehaviour
         costText.text = cost.ToString();
     }
 
+    public void BattleStart()
+    {
+        StartCoroutine(Battle());
+    }
+
+    IEnumerator Battle()
+    {
+        playerChooseButton.SetActive(false);
+        bPlayerUnitMove = true;
+        bEnemyUnitMove = true;
+        yield return new WaitForSeconds(3.0f);
+        playerChooseButton.SetActive(true);
+        enemyLimit = 0;
+        enemyCount = 0;
+        limit = 0;
+        unitCount = 0;
+    }
+
     private void PlayerTurn()
     {
         state = GameState.PLAYERTURN;
         Debug.Log("현재 플레이어 차례");
-
-        playerAttackButton.SetActive(true);
-        playerDefenceButton.SetActive(false);
     }
 
     IEnumerator EnemyTurn()
@@ -145,9 +154,6 @@ public partial class GameManager : MonoBehaviour
     {
         state = GameState.ENEMYTURN;
         Debug.Log("현재 적 차례");
-
-        playerAttackButton.SetActive(false);
-        playerDefenceButton.SetActive(true);
     }
 
     IEnumerator PlayerAttack()

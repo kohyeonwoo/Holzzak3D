@@ -93,6 +93,25 @@ public partial class GameManager : MonoBehaviour
         }
     }
 
-  
+
+    public void PlayerSpawnUnit()
+    {
+
+        int rand = Random.Range(1, 6);
+        int rand2 = Random.Range(0, 2);
+
+        for (int i = 1; i <= rand; i++)
+        {
+            if (playerUnitSpawnLocation.Count >= limit)
+            {
+                Instantiate(unitList[rand2], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                limit++;
+                unitCount++;
+            }
+        }
+
+
+
+    }
 
 }
