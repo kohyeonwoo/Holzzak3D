@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 3338031671870058545}
   m_Layer: 0
   m_Name: Ork
-  m_TagString: Opposite
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

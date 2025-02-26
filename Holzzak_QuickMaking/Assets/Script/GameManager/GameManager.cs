@@ -43,6 +43,8 @@ public partial class GameManager : MonoBehaviour
 
     public bool bEnemyDead;
 
+    public bool bShake;
+
     public GameState state;
 
     public GameObject enemies;
@@ -95,6 +97,8 @@ public partial class GameManager : MonoBehaviour
         bPlayerUnitDestroy = false;
 
         bEnemyUnitDestroy = false;
+
+        bShake = false;
 
         state = GameState.START;
        

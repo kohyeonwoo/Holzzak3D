@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
+
     [SerializeField]
     private float shakeDuration = 0.1f;
 
@@ -14,7 +15,7 @@ public class CameraShake : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(GameManager.instance.bShake)
         {
             ShakeIt();
         }
@@ -22,12 +23,13 @@ public class CameraShake : MonoBehaviour
 
     private IEnumerator Shake()
     {
-        if(isShaking)
+        if(GameManager.instance.bShake)
         {
             yield return null;
         }
 
-        isShaking = true;
+        //isShaking = true;
+        GameManager.instance.bShake = true;
 
         Vector3 originalPos = transform.localPosition;
 
@@ -47,7 +49,8 @@ public class CameraShake : MonoBehaviour
         }
 
         transform.localPosition = originalPos;
-        isShaking = false;
+        //isShaking = false;
+        GameManager.instance.bShake = false;
 
     }
 

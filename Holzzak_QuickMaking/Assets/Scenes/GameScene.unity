@@ -2150,6 +2150,7 @@ MonoBehaviour:
   bEnemyUnitDestroy: 0
   bPlayerDead: 0
   bEnemyDead: 0
+  bShake: 0
   state: 0
   enemies: {fileID: 4054698208095089337, guid: a44d840823937fc4d8b15ff30e18ee23, type: 3}
   unitList:
