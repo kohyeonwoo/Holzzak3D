@@ -2461,7 +2461,6 @@ GameObject:
   - component: {fileID: 1749790548318388687}
   - component: {fileID: 5482470251795359123}
   - component: {fileID: 6158018058191014740}
-  - component: {fileID: 3930501170204570227}
   - component: {fileID: -7844761341886210695}
   m_Layer: 0
   m_Name: Player_Magician
@@ -2480,7 +2479,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15115358, y: 0.000000059604645, z: -0.09508884}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5426840359918014619}
@@ -2531,33 +2530,6 @@ CapsuleCollider:
   m_Height: 1.8772755
   m_Direction: 1
   m_Center: {x: 0, y: 0.93, z: 0}
---- !u!54 &3930501170204570227
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8666468550303549717}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 4
-  m_AngularDrag: 999
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!114 &-7844761341886210695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2570,6 +2542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0cc896279485a42a59eb3f12a3f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Player
+  range: 7.5
 --- !u!1 &8778901190172080129
 GameObject:
   m_ObjectHideFlags: 0

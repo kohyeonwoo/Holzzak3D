@@ -5,25 +5,25 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public Transform target;
+    //public Transform target;
 
-    [SerializeField]
-    private string targetTag = "Unit";
+    //[SerializeField]
+    //private string targetTag = "Unit";
 
-    private Animator animator;
-    private Rigidbody rigid;
+    protected Animator animator;
+   // private Rigidbody rigid;
     
-    private float speed;
+   // private float speed;
 
-    [SerializeField]
-    private float range = 7.5f;
+    //[SerializeField]
+    //private float range = 7.5f;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        rigid = GetComponent<Rigidbody>();
+        //rigid = GetComponent<Rigidbody>();
 
-        speed = 2.0f;
+       // speed = 2.0f;
     }
 
    

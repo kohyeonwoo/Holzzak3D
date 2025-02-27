@@ -492,8 +492,6 @@ GameObject:
   - component: {fileID: 1173616700528202601}
   - component: {fileID: 825836215189884279}
   - component: {fileID: 6138259659852010292}
-  - component: {fileID: -5764653737940646043}
-  - component: {fileID: 6170090082283535332}
   - component: {fileID: 6265102492166892210}
   m_Layer: 0
   m_Name: Magician_Green
@@ -512,7 +510,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9, y: 1.9, z: 1.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6415713601854916321}
@@ -563,56 +561,6 @@ CapsuleCollider:
   m_Height: 1.8772755
   m_Direction: 1
   m_Center: {x: 0, y: 0.99, z: 0}
---- !u!54 &-5764653737940646043
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610762360741916021}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &6170090082283535332
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610762360741916021}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6265102492166892210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ba694b02b3a544fb046dd01df506d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Enemy
+  range: 7.5
 --- !u!1 &2206379001300426402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,13 +1212,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4295946810950081736}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9774399, y: -0.068750516, z: -1.0184432}
-  m_LocalScale: {x: 100, y: 100.000046, z: 100.00007}
+  m_LocalRotation: {x: -0.575833, y: 0.06945402, z: 0.097547315, w: 0.80875033}
+  m_LocalPosition: {x: -34.2, y: -58.3, z: -18.7}
+  m_LocalScale: {x: 100, y: 100.000046, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2903268022971015542}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -70.902, y: 0, z: 13.755}
 --- !u!33 &6284572492310355920
 MeshFilter:
   m_ObjectHideFlags: 0

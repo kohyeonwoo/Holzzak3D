@@ -109,9 +109,7 @@ public partial class GameManager : MonoBehaviour
                 unitCount++;
             }
         }
-
-
-
     }
 
+   
 }

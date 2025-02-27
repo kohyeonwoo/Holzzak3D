@@ -11,6 +11,8 @@ public class CameraShake : MonoBehaviour
     [SerializeField]
     private float shakeAmount = 0.2f;
 
+    public GameObject playerHitEffect;
+
     private bool isShaking = false;
 
     private void Update()
@@ -30,6 +32,7 @@ public class CameraShake : MonoBehaviour
 
         //isShaking = true;
         GameManager.instance.bShake = true;
+        playerHitEffect.SetActive(true);
 
         Vector3 originalPos = transform.localPosition;
 
@@ -51,6 +54,7 @@ public class CameraShake : MonoBehaviour
         transform.localPosition = originalPos;
         //isShaking = false;
         GameManager.instance.bShake = false;
+        playerHitEffect.SetActive(false);
 
     }
 

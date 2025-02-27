@@ -5,6 +5,9 @@ using UnityEngine;
 
 public enum GameState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
+public enum PlayerCharacter { NONE, Commissar, Magician, WON, LOST}
+
+
 public partial class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
@@ -59,8 +62,6 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject playerChooseButton;
 
-    public GameObject playerHitEffect;
-
     public Slider healthBar;
 
     public Slider enemyHealthBar;
@@ -78,11 +79,11 @@ public partial class GameManager : MonoBehaviour
     private void Start()
     {
 
-        maxHealth = 50.0f;
+        maxHealth = 15.0f;
 
         health = maxHealth;
 
-        enemyMaxHealth = 50.0f;
+        enemyMaxHealth = 15.0f;
 
         enemyHealth = enemyMaxHealth;
 
@@ -125,6 +126,16 @@ public partial class GameManager : MonoBehaviour
         enemyCount = 0;
         limit = 0;
         unitCount = 0;
+
+        if(health <= 0)
+        {
+            
+        }
+
+        if(enemyHealth <= 0)
+        {
+
+        }
     }
 
     private void PlayerTurn()
