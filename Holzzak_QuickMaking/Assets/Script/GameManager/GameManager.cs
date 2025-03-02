@@ -62,6 +62,10 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject playerChooseButton;
 
+    public GameObject winPannel;
+
+    public GameObject losePannel;
+
     public Slider healthBar;
 
     public Slider enemyHealthBar;
@@ -129,12 +133,12 @@ public partial class GameManager : MonoBehaviour
 
         if(health <= 0)
         {
-            
+            losePannel.SetActive(true);
         }
 
         if(enemyHealth <= 0)
         {
-
+            winPannel.SetActive(true);
         }
     }
 
