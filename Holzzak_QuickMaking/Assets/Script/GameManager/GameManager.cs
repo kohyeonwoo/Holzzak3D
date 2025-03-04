@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
@@ -54,7 +55,7 @@ public partial class GameManager : MonoBehaviour
 
     public List<GameObject> unitList = new List<GameObject>();
 
-    public List<GameObject> unitClones = new List<GameObject>();
+    public List<GameObject> specialUnitList = new List<GameObject>();
 
     public List<GameObject> playerUnitSpawnLocation = new List<GameObject>();
 
@@ -225,5 +226,20 @@ public partial class GameManager : MonoBehaviour
         enemyHealthBar.value = (float)enemyHealth / (float)enemyMaxHealth;
     }
 
+    public void NextGame()
+    {
+        health = maxHealth;
+        losePannel.SetActive(false);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void GoMenu()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
     
 }

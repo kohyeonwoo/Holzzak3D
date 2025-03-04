@@ -2,20 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DogKnight : Unit
+public class DogKnight : Player
 {
-    private void Start()
+    public void Attack()
     {
-        level = 2;
-        attackPoint = 2;
+        animator.SetBool("bAttack", true);
     }
 
-    private void Update()
+    public void AttackEnd()
     {
-        if (GameManager.instance.bPlayerUnitMove)
-        {
-            MoveForward();
-        }
+        animator.SetBool("bAttack", false);
     }
-
 }
