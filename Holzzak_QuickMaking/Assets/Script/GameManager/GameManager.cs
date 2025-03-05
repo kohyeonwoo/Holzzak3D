@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public enum GameState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
-public enum PlayerCharacter { NONE, Commissar, Magician, WON, LOST}
+public enum PlayerCharacter { NONE, Commissar, Magician, Knight}
 
 
 public partial class GameManager : MonoBehaviour
@@ -50,6 +50,8 @@ public partial class GameManager : MonoBehaviour
     public bool bShake;
 
     public GameState state;
+
+    public PlayerCharacter playerCharacter;
 
     public GameObject enemies;
 
@@ -107,7 +109,10 @@ public partial class GameManager : MonoBehaviour
         bShake = false;
 
         state = GameState.START;
-       
+
+        playerCharacter = PlayerCharacter.NONE;
+
+
     }
 
     private void Update()
@@ -217,6 +222,21 @@ public partial class GameManager : MonoBehaviour
         }
     }
 
+    public void SetPlayerCharacter1()
+    {
+        playerCharacter = PlayerCharacter.Commissar;
+    }
+
+    public void SetPlayerCharacter2()
+    {
+        playerCharacter = PlayerCharacter.Magician;
+    }
+
+    public void SetPlayerCharacter3()
+    {
+        playerCharacter = PlayerCharacter.Knight;
+    }
+
     public void HandleHp()
     {
         healthBar.value = (float)health / (float)maxHealth;
@@ -229,6 +249,7 @@ public partial class GameManager : MonoBehaviour
     public void NextGame()
     {
         health = maxHealth;
+        enemyHealth = enemyMaxHealth;
         losePannel.SetActive(false);
     }
 

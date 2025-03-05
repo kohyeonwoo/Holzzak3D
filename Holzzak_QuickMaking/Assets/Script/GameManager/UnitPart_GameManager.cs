@@ -98,17 +98,58 @@ public partial class GameManager : MonoBehaviour
     {
 
         int rand = Random.Range(1, 6);
-        int rand2 = Random.Range(0, 2);
 
+
+        int rand2 = Random.Range(0, 2);
+        int rand3 = Random.Range(2, 7);
+       
         for (int i = 1; i <= rand; i++)
         {
             if (playerUnitSpawnLocation.Count >= limit)
             {
-                Instantiate(unitList[rand2], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
-                limit++;
-                unitCount++;
+
+                switch (playerCharacter)
+                {
+                    case PlayerCharacter.Commissar:
+                        Instantiate(unitList[rand2], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        break;
+
+                    case PlayerCharacter.Magician:
+                        Instantiate(unitList[rand3], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        break;
+
+                    case PlayerCharacter.Knight:
+                        Instantiate(unitList[9], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        limit++;
+                        unitCount++;
+                        break;
+
+                }
+
+             
             }
+
+           
+
+          
         }
+    }
+
+    public void PlayerSpawnSpecialUnit()
+    {
+        int rand = Random.Range(0, 7);
+        int rand2 = Random.Range(0, playerUnitSpawnLocation.Count - 1);
+
+        if(cost >= 3)
+        {
+            Instantiate(specialUnitList[rand], playerUnitSpawnLocation[rand2].transform.position, playerUnitSpawnLocation[rand2].transform.rotation);
+            cost -= 3;
+        }
+     
     }
 
    

@@ -90,9 +90,16 @@ public class Unit : MonoBehaviour
             Destroy(this.gameObject);
             GameManager.instance.enemyHealth -= attackPoint;
             GameManager.instance.EnemyHandleHP();
+
+
+            if (GameManager.instance.cost <= 0)
+            {
+                GameManager.instance.cost++;
+            }
+
         }
 
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             Destroy(this.gameObject);
         }

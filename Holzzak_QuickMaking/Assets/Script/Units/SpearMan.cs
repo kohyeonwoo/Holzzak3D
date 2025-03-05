@@ -6,8 +6,8 @@ public class SpearMan : Unit
 {
     private void Start()
     {
-        level = 3;
-        attackPoint = 3;
+        level = 1;
+        attackPoint = 1;
     }
 
     private void Update()
