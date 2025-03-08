@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     protected Animator anim;
     protected Rigidbody rigid;
 
+    public GameObject hitParticle;
+    public Transform hitLocation;
+
     protected void Awake()
     {
         anim = GetComponent<Animator>();
@@ -32,14 +35,23 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            GameObject obj = Instantiate(hitParticle, hitLocation.position, Quaternion.identity);
+            Destroy(obj, 2.0f);
+
             Destroy(this.gameObject);
             GameManager.instance.health -= attackPoint;
             GameManager.instance.HandleHp();
+            AudioManager.Instance.PlaySFX("PlayerHitSound");
             GameManager.instance.bShake = true;
+  
         }
 
         if (collision.gameObject.tag == "Unit")
         {
+            AudioManager.Instance.PlaySFX("CollisionSound");
+            GameObject obj = Instantiate(hitParticle, hitLocation.position, Quaternion.identity);
+            Destroy(obj, 2.0f);
+
             Destroy(this.gameObject);
         }
     }

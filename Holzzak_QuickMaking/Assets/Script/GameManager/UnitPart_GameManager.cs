@@ -102,7 +102,9 @@ public partial class GameManager : MonoBehaviour
 
         int rand2 = Random.Range(0, 2);
         int rand3 = Random.Range(2, 7);
-       
+
+        AudioManager.Instance.PlaySFX("DiceRollingSound");
+
         for (int i = 1; i <= rand; i++)
         {
             if (playerUnitSpawnLocation.Count >= limit)
@@ -123,7 +125,7 @@ public partial class GameManager : MonoBehaviour
                         break;
 
                     case PlayerCharacter.Knight:
-                        Instantiate(unitList[9], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
+                        Instantiate(unitList[7], playerUnitSpawnLocation[limit].transform.position, playerUnitSpawnLocation[limit].transform.rotation);
                         limit++;
                         unitCount++;
                         break;
@@ -141,10 +143,10 @@ public partial class GameManager : MonoBehaviour
 
     public void PlayerSpawnSpecialUnit()
     {
-        int rand = Random.Range(0, 7);
-        int rand2 = Random.Range(0, playerUnitSpawnLocation.Count - 1);
+        int rand = Random.Range(0, specialUnitList.Count);
+        int rand2 = Random.Range(0, 7);
 
-        if(cost >= 3)
+        if (cost > 3)
         {
             Instantiate(specialUnitList[rand], playerUnitSpawnLocation[rand2].transform.position, playerUnitSpawnLocation[rand2].transform.rotation);
             cost -= 3;
@@ -153,4 +155,11 @@ public partial class GameManager : MonoBehaviour
     }
 
    
+    public void SpawnKnightShield()
+    {
+        int rand = Random.Range(1, 6);
+        Instantiate(knightShield, playerUnitSpawnLocation[rand].transform.position, playerUnitSpawnLocation[rand].transform.rotation);
+
+    }
+
 }

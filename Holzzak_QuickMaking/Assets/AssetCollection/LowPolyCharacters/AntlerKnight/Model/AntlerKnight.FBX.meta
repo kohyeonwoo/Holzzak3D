@@ -1,134 +1,354 @@
 fileFormatVersion: 2
 guid: 9fb3f697c73e7a5418a6ddc31732063f
-timeCreated: 1484921900
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: AntlerKnight
-    100004: Bon_L_thigh
-    100006: Bon_R_thigh
-    100008: Bone_Head
-    100010: Bone_HIP
-    100012: Bone_L_ArmDown
-    100014: Bone_L_ArmUp
-    100016: Bone_L_Fingers
-    100018: Bone_L_Foot
-    100020: Bone_L_Hand
-    100022: Bone_L_Leg
-    100024: Bone_L_Thumb
-    100026: Bone_LowBack
-    100028: Bone_R_ArmDown
-    100030: Bone_R_ArmUp
-    100032: Bone_R_Fingers
-    100034: Bone_R_Foot
-    100036: Bone_R_Hand
-    100038: Bone_R_Leg
-    100040: Bone_R_Thumb
-    100042: Bone_UpBack
-    100044: CTRL_hip
-    100046: CTRL_ROOT
-    100048: CTRL_head
-    100050: CTRL_L_Foot
-    100052: CTRL_L_Foot 1
-    100054: CTRL_R_Foot
-    100056: CTRL_R_Foot 1
-    400000: //RootNode
-    400002: AntlerKnight
-    400004: Bon_L_thigh
-    400006: Bon_R_thigh
-    400008: Bone_Head
-    400010: Bone_HIP
-    400012: Bone_L_ArmDown
-    400014: Bone_L_ArmUp
-    400016: Bone_L_Fingers
-    400018: Bone_L_Foot
-    400020: Bone_L_Hand
-    400022: Bone_L_Leg
-    400024: Bone_L_Thumb
-    400026: Bone_LowBack
-    400028: Bone_R_ArmDown
-    400030: Bone_R_ArmUp
-    400032: Bone_R_Fingers
-    400034: Bone_R_Foot
-    400036: Bone_R_Hand
-    400038: Bone_R_Leg
-    400040: Bone_R_Thumb
-    400042: Bone_UpBack
-    400044: CTRL_hip
-    400046: CTRL_ROOT
-    400048: CTRL_head
-    400050: CTRL_L_Foot
-    400052: CTRL_L_Foot 1
-    400054: CTRL_R_Foot
-    400056: CTRL_R_Foot 1
-    2300000: CTRL_head
-    2300002: CTRL_hip
-    2300004: CTRL_L_Foot
-    2300006: CTRL_L_Foot 1
-    2300008: CTRL_R_Foot
-    2300010: CTRL_R_Foot 1
-    2300012: CTRL_ROOT
-    3300000: CTRL_head
-    3300002: CTRL_hip
-    3300004: CTRL_L_Foot
-    3300006: CTRL_L_Foot 1
-    3300008: CTRL_R_Foot
-    3300010: CTRL_R_Foot 1
-    3300012: CTRL_ROOT
-    4300000: AntlerKnight
-    4300002: CTRL_ROOT
-    4300004: CTRL_hip
-    4300006: CTRL_head
-    4300008: CTRL_R_Foot
-    4300010: CTRL_L_Foot
-    4300012: CTRL_R_Foot
-    4300014: CTRL_L_Foot
-    7400000: Idle1
-    7400002: Attack1
-    7400004: Walk
-    7400006: Run
-    7400008: Idle2
-    7400010: Attack2
-    7400012: Gather
-    7400014: Jab
-    7400016: Wave
-    7400018: Taunt
-    7400020: Radiocall
-    7400022: Peer
-    7400024: LookBehind
-    7400026: FrontRoll
-    7400028: TakeWeaponBack
-    7400030: TakeWeaponSide
-    7400032: KickFront
-    7400034: Jump
-    7400036: HitFromRight
-    7400038: HitFromLeft
-    7400040: Death
-    7400042: AimGun
-    7400044: FireGun
-    7400046: ZombieWalk
-    7400048: ZombieBite
-    9500000: //RootNode
-    13700000: AntlerKnight
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: AntlerKnight
+  - first:
+      1: 100004
+    second: Bon_L_thigh
+  - first:
+      1: 100006
+    second: Bon_R_thigh
+  - first:
+      1: 100008
+    second: Bone_Head
+  - first:
+      1: 100010
+    second: Bone_HIP
+  - first:
+      1: 100012
+    second: Bone_L_ArmDown
+  - first:
+      1: 100014
+    second: Bone_L_ArmUp
+  - first:
+      1: 100016
+    second: Bone_L_Fingers
+  - first:
+      1: 100018
+    second: Bone_L_Foot
+  - first:
+      1: 100020
+    second: Bone_L_Hand
+  - first:
+      1: 100022
+    second: Bone_L_Leg
+  - first:
+      1: 100024
+    second: Bone_L_Thumb
+  - first:
+      1: 100026
+    second: Bone_LowBack
+  - first:
+      1: 100028
+    second: Bone_R_ArmDown
+  - first:
+      1: 100030
+    second: Bone_R_ArmUp
+  - first:
+      1: 100032
+    second: Bone_R_Fingers
+  - first:
+      1: 100034
+    second: Bone_R_Foot
+  - first:
+      1: 100036
+    second: Bone_R_Hand
+  - first:
+      1: 100038
+    second: Bone_R_Leg
+  - first:
+      1: 100040
+    second: Bone_R_Thumb
+  - first:
+      1: 100042
+    second: Bone_UpBack
+  - first:
+      1: 100044
+    second: CTRL_hip
+  - first:
+      1: 100046
+    second: CTRL_ROOT
+  - first:
+      1: 100048
+    second: CTRL_head
+  - first:
+      1: 100050
+    second: CTRL_L_Foot
+  - first:
+      1: 100052
+    second: CTRL_L_Foot 1
+  - first:
+      1: 100054
+    second: CTRL_R_Foot
+  - first:
+      1: 100056
+    second: CTRL_R_Foot 1
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: AntlerKnight
+  - first:
+      4: 400004
+    second: Bon_L_thigh
+  - first:
+      4: 400006
+    second: Bon_R_thigh
+  - first:
+      4: 400008
+    second: Bone_Head
+  - first:
+      4: 400010
+    second: Bone_HIP
+  - first:
+      4: 400012
+    second: Bone_L_ArmDown
+  - first:
+      4: 400014
+    second: Bone_L_ArmUp
+  - first:
+      4: 400016
+    second: Bone_L_Fingers
+  - first:
+      4: 400018
+    second: Bone_L_Foot
+  - first:
+      4: 400020
+    second: Bone_L_Hand
+  - first:
+      4: 400022
+    second: Bone_L_Leg
+  - first:
+      4: 400024
+    second: Bone_L_Thumb
+  - first:
+      4: 400026
+    second: Bone_LowBack
+  - first:
+      4: 400028
+    second: Bone_R_ArmDown
+  - first:
+      4: 400030
+    second: Bone_R_ArmUp
+  - first:
+      4: 400032
+    second: Bone_R_Fingers
+  - first:
+      4: 400034
+    second: Bone_R_Foot
+  - first:
+      4: 400036
+    second: Bone_R_Hand
+  - first:
+      4: 400038
+    second: Bone_R_Leg
+  - first:
+      4: 400040
+    second: Bone_R_Thumb
+  - first:
+      4: 400042
+    second: Bone_UpBack
+  - first:
+      4: 400044
+    second: CTRL_hip
+  - first:
+      4: 400046
+    second: CTRL_ROOT
+  - first:
+      4: 400048
+    second: CTRL_head
+  - first:
+      4: 400050
+    second: CTRL_L_Foot
+  - first:
+      4: 400052
+    second: CTRL_L_Foot 1
+  - first:
+      4: 400054
+    second: CTRL_R_Foot
+  - first:
+      4: 400056
+    second: CTRL_R_Foot 1
+  - first:
+      23: 2300000
+    second: CTRL_head
+  - first:
+      23: 2300002
+    second: CTRL_hip
+  - first:
+      23: 2300004
+    second: CTRL_L_Foot
+  - first:
+      23: 2300006
+    second: CTRL_L_Foot 1
+  - first:
+      23: 2300008
+    second: CTRL_R_Foot
+  - first:
+      23: 2300010
+    second: CTRL_R_Foot 1
+  - first:
+      23: 2300012
+    second: CTRL_ROOT
+  - first:
+      33: 3300000
+    second: CTRL_head
+  - first:
+      33: 3300002
+    second: CTRL_hip
+  - first:
+      33: 3300004
+    second: CTRL_L_Foot
+  - first:
+      33: 3300006
+    second: CTRL_L_Foot 1
+  - first:
+      33: 3300008
+    second: CTRL_R_Foot
+  - first:
+      33: 3300010
+    second: CTRL_R_Foot 1
+  - first:
+      33: 3300012
+    second: CTRL_ROOT
+  - first:
+      43: 4300000
+    second: AntlerKnight
+  - first:
+      43: 4300002
+    second: CTRL_ROOT
+  - first:
+      43: 4300004
+    second: CTRL_hip
+  - first:
+      43: 4300006
+    second: CTRL_head
+  - first:
+      43: 4300008
+    second: CTRL_R_Foot
+  - first:
+      43: 4300010
+    second: CTRL_L_Foot
+  - first:
+      43: 4300012
+    second: CTRL_R_Foot
+  - first:
+      43: 4300014
+    second: CTRL_L_Foot
+  - first:
+      74: 7400000
+    second: Idle1
+  - first:
+      74: 7400002
+    second: Attack1
+  - first:
+      74: 7400004
+    second: Walk
+  - first:
+      74: 7400006
+    second: Run
+  - first:
+      74: 7400008
+    second: Idle2
+  - first:
+      74: 7400010
+    second: Attack2
+  - first:
+      74: 7400012
+    second: Gather
+  - first:
+      74: 7400014
+    second: Jab
+  - first:
+      74: 7400016
+    second: Wave
+  - first:
+      74: 7400018
+    second: Taunt
+  - first:
+      74: 7400020
+    second: Radiocall
+  - first:
+      74: 7400022
+    second: Peer
+  - first:
+      74: 7400024
+    second: LookBehind
+  - first:
+      74: 7400026
+    second: FrontRoll
+  - first:
+      74: 7400028
+    second: TakeWeaponBack
+  - first:
+      74: 7400030
+    second: TakeWeaponSide
+  - first:
+      74: 7400032
+    second: KickFront
+  - first:
+      74: 7400034
+    second: Jump
+  - first:
+      74: 7400036
+    second: HitFromRight
+  - first:
+      74: 7400038
+    second: HitFromLeft
+  - first:
+      74: 7400040
+    second: Death
+  - first:
+      74: 7400042
+    second: AimGun
+  - first:
+      74: 7400044
+    second: FireGun
+  - first:
+      74: 7400046
+    second: ZombieWalk
+  - first:
+      74: 7400048
+    second: ZombieBite
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: AntlerKnight
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 1
+    removeConstantScaleCurves: 0
     motionNodeName: <Root Transform>
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Bone_UpBack' has translation animation that
-      will be discarded.\n\t'Bone_Head' has translation animation that will be discarded.\n"
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bone_UpBack' has translation animation
+      that will be discarded.\n\t'Bone_Head' has translation animation that will
+      be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -140,10 +360,12 @@ ModelImporter:
     - CTRL_ROOT/CTRL_hip/Bone_HIP/Bone_LowBack/Bone_UpBack/Bone_L_ArmUp/Bone_L_ArmDown/Bone_L_Hand
     - CTRL_ROOT/CTRL_hip/Bone_HIP/Bone_LowBack/Bone_UpBack/Bone_R_ArmUp/Bone_R_ArmDown/Bone_R_Hand
     - CTRL_ROOT/CTRL_hip/Bone_HIP/Bone_LowBack/Bone_UpBack/Bone_Head
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Idle1
       takeName: Take 001
+      internalID: 0
       firstFrame: 10
       lastFrame: 80
       wrapMode: 0
@@ -152,7 +374,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -220,6 +442,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack1
       takeName: Take 001
+      internalID: 0
       firstFrame: 90
       lastFrame: 120
       wrapMode: 0
@@ -296,6 +519,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 140
       lastFrame: 200
       wrapMode: 0
@@ -304,7 +528,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -372,6 +596,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Take 001
+      internalID: 0
       firstFrame: 220
       lastFrame: 260
       wrapMode: 0
@@ -380,7 +605,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -448,6 +673,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle2
       takeName: Take 001
+      internalID: 0
       firstFrame: 270
       lastFrame: 320
       wrapMode: 0
@@ -524,6 +750,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack2
       takeName: Take 001
+      internalID: 0
       firstFrame: 330
       lastFrame: 400
       wrapMode: 0
@@ -600,6 +827,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Gather
       takeName: Take 001
+      internalID: 0
       firstFrame: 420
       lastFrame: 470
       wrapMode: 0
@@ -676,6 +904,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jab
       takeName: Take 001
+      internalID: 0
       firstFrame: 480
       lastFrame: 520
       wrapMode: 0
@@ -752,6 +981,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Wave
       takeName: Take 001
+      internalID: 0
       firstFrame: 530
       lastFrame: 620
       wrapMode: 0
@@ -828,6 +1058,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Taunt
       takeName: Take 001
+      internalID: 0
       firstFrame: 630
       lastFrame: 690
       wrapMode: 0
@@ -914,6 +1145,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Radiocall
       takeName: Take 001
+      internalID: 0
       firstFrame: 700
       lastFrame: 760
       wrapMode: 0
@@ -1000,6 +1232,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Peer
       takeName: Take 001
+      internalID: 0
       firstFrame: 770
       lastFrame: 860
       wrapMode: 0
@@ -1086,6 +1319,7 @@ ModelImporter:
     - serializedVersion: 16
       name: LookBehind
       takeName: Take 001
+      internalID: 0
       firstFrame: 870
       lastFrame: 930
       wrapMode: 0
@@ -1172,6 +1406,7 @@ ModelImporter:
     - serializedVersion: 16
       name: FrontRoll
       takeName: Take 001
+      internalID: 0
       firstFrame: 940
       lastFrame: 980
       wrapMode: 0
@@ -1258,6 +1493,7 @@ ModelImporter:
     - serializedVersion: 16
       name: TakeWeaponBack
       takeName: Take 001
+      internalID: 0
       firstFrame: 1000
       lastFrame: 1055
       wrapMode: 0
@@ -1334,6 +1570,7 @@ ModelImporter:
     - serializedVersion: 16
       name: TakeWeaponSide
       takeName: Take 001
+      internalID: 0
       firstFrame: 1060
       lastFrame: 1100
       wrapMode: 0
@@ -1410,6 +1647,7 @@ ModelImporter:
     - serializedVersion: 16
       name: KickFront
       takeName: Take 001
+      internalID: 0
       firstFrame: 1110
       lastFrame: 1145
       wrapMode: 0
@@ -1486,6 +1724,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump
       takeName: Take 001
+      internalID: 0
       firstFrame: 1150
       lastFrame: 1215
       wrapMode: 0
@@ -1562,6 +1801,7 @@ ModelImporter:
     - serializedVersion: 16
       name: HitFromRight
       takeName: Take 001
+      internalID: 0
       firstFrame: 1220
       lastFrame: 1235
       wrapMode: 0
@@ -1638,6 +1878,7 @@ ModelImporter:
     - serializedVersion: 16
       name: HitFromLeft
       takeName: Take 001
+      internalID: 0
       firstFrame: 1235
       lastFrame: 1250
       wrapMode: 0
@@ -1714,6 +1955,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Take 001
+      internalID: 0
       firstFrame: 1255
       lastFrame: 1300
       wrapMode: 0
@@ -1790,6 +2032,7 @@ ModelImporter:
     - serializedVersion: 16
       name: AimGun
       takeName: Take 001
+      internalID: 0
       firstFrame: 1315
       lastFrame: 1345
       wrapMode: 0
@@ -1866,6 +2109,7 @@ ModelImporter:
     - serializedVersion: 16
       name: FireGun
       takeName: Take 001
+      internalID: 0
       firstFrame: 1350
       lastFrame: 1370
       wrapMode: 0
@@ -1942,6 +2186,7 @@ ModelImporter:
     - serializedVersion: 16
       name: ZombieWalk
       takeName: Take 001
+      internalID: 0
       firstFrame: 1385
       lastFrame: 1445
       wrapMode: 0
@@ -2018,6 +2263,7 @@ ModelImporter:
     - serializedVersion: 16
       name: ZombieBite
       takeName: Take 001
+      internalID: 0
       firstFrame: 1460
       lastFrame: 1520
       wrapMode: 0
@@ -2097,26 +2343,49 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Bone_HIP
       humanName: Hips
@@ -2406,14 +2675,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

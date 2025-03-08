@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 5893343536244956524}
   - component: {fileID: 4444714301032166267}
   - component: {fileID: 5538806666648043281}
+  - component: {fileID: -4106746030145489230}
   m_Layer: 0
   m_Name: Monster_X_Brown
   m_TagString: Unit
@@ -710,6 +711,7 @@ Transform:
   - {fileID: 4710874869984808390}
   - {fileID: 4839797555354313701}
   - {fileID: 5542032662512738467}
+  - {fileID: 6393667924013979066}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5893343536244956524
@@ -783,6 +785,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4106746030145489230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4090051493517462358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e005f7beb255b1a4ab23130b5fd8306c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Enemy
+  range: 7.5
+  hitParticle: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  hitLocation: {fileID: 6393667924013979066}
 --- !u!1 &4225213320200401673
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +833,37 @@ Transform:
   m_Children:
   - {fileID: 7955207161387610388}
   m_Father: {fileID: 1453176275171615554}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4994405383217687656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6393667924013979066}
+  m_Layer: 0
+  m_Name: ParticleLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6393667924013979066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4994405383217687656}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 24.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7992441058428731629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5225022430092035110
 GameObject:

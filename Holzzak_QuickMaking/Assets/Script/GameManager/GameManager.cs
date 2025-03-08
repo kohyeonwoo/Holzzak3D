@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public enum GameState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
-public enum PlayerCharacter { NONE, Commissar, Magician, Knight}
+public enum PlayerCharacter { Commissar, Magician, Knight}
 
 
 public partial class GameManager : MonoBehaviour
@@ -55,6 +55,8 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject enemies;
 
+    public GameObject knightShield;
+
     public List<GameObject> unitList = new List<GameObject>();
 
     public List<GameObject> specialUnitList = new List<GameObject>();
@@ -65,9 +67,13 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject playerChooseButton;
 
+    public GameObject playerAbilityButton;
+
     public GameObject winPannel;
 
     public GameObject losePannel;
+
+    public GameObject lowCostImage;
 
     public Slider healthBar;
 
@@ -85,6 +91,8 @@ public partial class GameManager : MonoBehaviour
 
     private void Start()
     {
+
+        AudioManager.Instance.PlayMusic("Background1");
 
         maxHealth = 15.0f;
 
@@ -110,14 +118,23 @@ public partial class GameManager : MonoBehaviour
 
         state = GameState.START;
 
-        playerCharacter = PlayerCharacter.NONE;
-
+        playerCharacter = PlayerCharacter.Commissar;
 
     }
 
     private void Update()
     {
         costText.text = cost.ToString();
+
+        if(cost < 3)
+        {
+            lowCostImage.SetActive(true);
+        }
+        else
+        {
+            lowCostImage.SetActive(false);
+        }
+
     }
 
     public void BattleStart()
@@ -128,9 +145,12 @@ public partial class GameManager : MonoBehaviour
     IEnumerator Battle()
     {
         playerChooseButton.SetActive(false);
+        
         bPlayerUnitMove = true;
         bEnemyUnitMove = true;
+        playerAbilityButton.SetActive(true);
         yield return new WaitForSeconds(3.0f);
+        playerAbilityButton.SetActive(false);
         playerChooseButton.SetActive(true);
         enemyLimit = 0;
         enemyCount = 0;
@@ -173,7 +193,6 @@ public partial class GameManager : MonoBehaviour
         }
 
     }
-
 
     private void EnemyTurns()
     {
@@ -222,6 +241,24 @@ public partial class GameManager : MonoBehaviour
         }
     }
 
+    public void UseAbility()
+    { 
+        
+        switch(playerCharacter)
+        {
+            case PlayerCharacter.Commissar:
+                CommissarAbility();
+                break;
+            case PlayerCharacter.Magician:
+                MagicianAbility();
+                break;
+            case PlayerCharacter.Knight:
+                KnightAbility();
+                break; 
+        }
+    }
+
+
     public void SetPlayerCharacter1()
     {
         playerCharacter = PlayerCharacter.Commissar;
@@ -237,6 +274,27 @@ public partial class GameManager : MonoBehaviour
         playerCharacter = PlayerCharacter.Knight;
     }
 
+    public void CommissarAbility()
+    {
+        int point = Random.Range(1, 6);
+
+        enemyHealth -= point;
+        EnemyHandleHP();
+    }
+
+    public void MagicianAbility()
+    {
+        int point = Random.Range(1, 6);
+
+        health += point;
+        HandleHp();
+    }
+
+    public void KnightAbility()
+    {
+        SpawnKnightShield();
+    }
+
     public void HandleHp()
     {
         healthBar.value = (float)health / (float)maxHealth;
@@ -250,6 +308,8 @@ public partial class GameManager : MonoBehaviour
     {
         health = maxHealth;
         enemyHealth = enemyMaxHealth;
+        HandleHp();
+        EnemyHandleHP();
         losePannel.SetActive(false);
     }
 
@@ -260,7 +320,7 @@ public partial class GameManager : MonoBehaviour
 
     public void GoMenu()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("GameScene");
     }
     
 }

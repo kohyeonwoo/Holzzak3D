@@ -743,6 +743,7 @@ GameObject:
   - component: {fileID: 3790561101084723340}
   - component: {fileID: 7153627350863955879}
   - component: {fileID: 7890959949522690704}
+  - component: {fileID: -3030633370905497197}
   m_Layer: 0
   m_Name: Crab_Red
   m_TagString: Unit
@@ -768,6 +769,7 @@ Transform:
   - {fileID: 4325841909878063947}
   - {fileID: 3712715468421674988}
   - {fileID: 3471286793075552461}
+  - {fileID: 8238527108519270798}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3790561101084723340
@@ -841,6 +843,23 @@ CapsuleCollider:
   m_Height: 1.17
   m_Direction: 1
   m_Center: {x: 0, y: 0.54, z: 0}
+--- !u!114 &-3030633370905497197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875807519395278764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f1c2a9be6d8f546991a8e328ea97b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Enemy
+  range: 7.5
+  hitParticle: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  hitLocation: {fileID: 8238527108519270798}
 --- !u!1 &4995080886774216588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1148,37 @@ Transform:
   m_Children:
   - {fileID: 8329018468013541226}
   m_Father: {fileID: 2585256750200225119}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7922437276628779813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8238527108519270798}
+  m_Layer: 0
+  m_Name: ParticleLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8238527108519270798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922437276628779813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.656, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8560639213415505947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8152371630303123792
 GameObject:

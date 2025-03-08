@@ -1409,6 +1409,37 @@ Transform:
   - {fileID: 7879591399108434598}
   m_Father: {fileID: 4760447864943443197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3221108561442340734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6096746582745325839}
+  m_Layer: 0
+  m_Name: ParticleLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6096746582745325839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221108561442340734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.601}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6811789291286423957}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3519845343144445721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2112,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3079024365266342875}
+  - {fileID: 6096746582745325839}
   m_Father: {fileID: 6375593325109978248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6697817975674558887
@@ -2702,6 +2734,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf65673b356b5d42b69eeaddc009efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Enemy
+  range: 7.5
+  hitParticle: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  hitLocation: {fileID: 6096746582745325839}
 --- !u!1 &9063020158368059936
 GameObject:
   m_ObjectHideFlags: 0

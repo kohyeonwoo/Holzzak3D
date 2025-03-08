@@ -788,6 +788,37 @@ Transform:
   - {fileID: 6104333221242455751}
   m_Father: {fileID: 4993524686722957274}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4330887531073473264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3863779674395120016}
+  m_Layer: 0
+  m_Name: ParticleLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3863779674395120016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330887531073473264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 25.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 801585797662997482}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4749400722428271635
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +931,7 @@ GameObject:
   - component: {fileID: 9101339698734603618}
   - component: {fileID: 8761356920066141935}
   - component: {fileID: 5570807933893746349}
+  - component: {fileID: -441779186229492977}
   m_Layer: 0
   m_Name: Monster_X_Green
   m_TagString: Unit
@@ -925,6 +957,7 @@ Transform:
   - {fileID: 567489947372933792}
   - {fileID: 1356379695353124109}
   - {fileID: 1942325759866962830}
+  - {fileID: 3863779674395120016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &9101339698734603618
@@ -998,6 +1031,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-441779186229492977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354881920518680918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e005f7beb255b1a4ab23130b5fd8306c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Enemy
+  range: 7.5
+  hitParticle: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  hitLocation: {fileID: 3863779674395120016}
 --- !u!1 &5589266677555695351
 GameObject:
   m_ObjectHideFlags: 0

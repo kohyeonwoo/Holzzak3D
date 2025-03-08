@@ -20,7 +20,10 @@ public class Unit : MonoBehaviour
 
     protected Animator anim;
     protected Rigidbody rigid;
-    
+
+    public GameObject hitParticle;
+    public Transform hitLocation;
+
     protected void Awake()
     {
         anim = GetComponent<Animator>();
@@ -87,12 +90,16 @@ public class Unit : MonoBehaviour
     {
         if (collision.gameObject.tag == "Opposite")
         {
+
+            GameObject obj = Instantiate(hitParticle, hitLocation.position, Quaternion.identity);
+            Destroy(obj, 2.0f);
+
             Destroy(this.gameObject);
+            AudioManager.Instance.PlaySFX("PlayerHitSound");
             GameManager.instance.enemyHealth -= attackPoint;
             GameManager.instance.EnemyHandleHP();
 
-
-            if (GameManager.instance.cost <= 0)
+            if (GameManager.instance.cost <= 3)
             {
                 GameManager.instance.cost++;
             }
@@ -101,6 +108,9 @@ public class Unit : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
+            AudioManager.Instance.PlaySFX("CollisionSound");
+            GameObject obj = Instantiate(hitParticle, hitLocation.position, Quaternion.identity);
+            Destroy(obj, 2.0f);
             Destroy(this.gameObject);
         }
     }
