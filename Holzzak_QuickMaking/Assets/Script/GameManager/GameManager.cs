@@ -57,6 +57,10 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject knightShield;
 
+    public GameObject healParticle;
+
+    public GameObject healParticleLocation;
+
     public List<GameObject> unitList = new List<GameObject>();
 
     public List<GameObject> specialUnitList = new List<GameObject>();
@@ -276,15 +280,19 @@ public partial class GameManager : MonoBehaviour
 
     public void CommissarAbility()
     {
-        int point = Random.Range(1, 6);
+        //int point = Random.Range(1, 6);
 
-        enemyHealth -= point;
-        EnemyHandleHP();
+        //enemyHealth -= point;
+        //EnemyHandleHP();
+        PlayerSpawnUnit();
     }
 
     public void MagicianAbility()
     {
         int point = Random.Range(1, 6);
+
+        GameObject obj = Instantiate(healParticle, healParticleLocation.transform.position, Quaternion.identity);
+        Destroy(obj, 2.0f);
 
         health += point;
         HandleHp();
