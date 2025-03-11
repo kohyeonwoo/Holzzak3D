@@ -8,6 +8,8 @@ public enum GameState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
 public enum PlayerCharacter { Commissar, Magician, Knight}
 
+public enum EnemyCharacter { Orks, PartyMonster, Guard, Mannequin}
+
 
 public partial class GameManager : MonoBehaviour
 {
@@ -31,6 +33,10 @@ public partial class GameManager : MonoBehaviour
 
     public int enemyNum = 0;
 
+    public int enemyListIndex = 0;
+
+    public int enemyMainIndex = 0;
+
     public float enemyHealth;
 
     public float enemyMaxHealth;
@@ -53,7 +59,7 @@ public partial class GameManager : MonoBehaviour
 
     public PlayerCharacter playerCharacter;
 
-    public GameObject enemies;
+    public EnemyCharacter enemyCharacter;
 
     public GameObject knightShield;
 
@@ -61,7 +67,11 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject healParticleLocation;
 
+    public List<GameObject> enemyMainList = new List<GameObject>();
+
     public List<GameObject> unitList = new List<GameObject>();
+
+    public List<GameObject> enemyUnitList = new List<GameObject>();
 
     public List<GameObject> specialUnitList = new List<GameObject>();
 
@@ -124,13 +134,17 @@ public partial class GameManager : MonoBehaviour
 
         playerCharacter = PlayerCharacter.Commissar;
 
+        enemyCharacter = EnemyCharacter.Orks;
+
     }
 
     private void Update()
     {
         costText.text = cost.ToString();
 
-        if(cost < 3)
+        SetEnemyMainCharacter();
+
+        if (cost < 3)
         {
             lowCostImage.SetActive(true);
         }
@@ -169,6 +183,38 @@ public partial class GameManager : MonoBehaviour
         if(enemyHealth <= 0)
         {
             winPannel.SetActive(true);
+        }
+    }
+
+    public void SetEnemyMainCharacter()
+    {
+        switch (enemyCharacter)
+        {
+            //enemyMainIndex --> 0 오크 , 1 파티, 2 가드, 3 마네퀸
+            case EnemyCharacter.Orks:
+                enemyMainList[0].SetActive(true);
+                enemyMainList[1].SetActive(false);
+                enemyMainList[2].SetActive(false);
+                enemyMainList[3].SetActive(false);
+                break;
+            case EnemyCharacter.PartyMonster:
+                enemyMainList[0].SetActive(false);
+                enemyMainList[1].SetActive(true);
+                enemyMainList[2].SetActive(false);
+                enemyMainList[3].SetActive(false);
+                break;
+            case EnemyCharacter.Guard:
+                enemyMainList[0].SetActive(false);
+                enemyMainList[1].SetActive(false);
+                enemyMainList[2].SetActive(true);
+                enemyMainList[3].SetActive(false);
+                break;
+            case EnemyCharacter.Mannequin:
+                enemyMainList[0].SetActive(false);
+                enemyMainList[1].SetActive(false);
+                enemyMainList[2].SetActive(false);
+                enemyMainList[3].SetActive(true);
+                break;
         }
     }
 
@@ -260,6 +306,7 @@ public partial class GameManager : MonoBehaviour
                 KnightAbility();
                 break; 
         }
+
     }
 
 
@@ -280,10 +327,6 @@ public partial class GameManager : MonoBehaviour
 
     public void CommissarAbility()
     {
-        //int point = Random.Range(1, 6);
-
-        //enemyHealth -= point;
-        //EnemyHandleHP();
         PlayerSpawnUnit();
     }
 
@@ -316,6 +359,8 @@ public partial class GameManager : MonoBehaviour
     {
         health = maxHealth;
         enemyHealth = enemyMaxHealth;
+        enemyMainIndex++;
+        enemyListIndex++;
         HandleHp();
         EnemyHandleHP();
         losePannel.SetActive(false);
