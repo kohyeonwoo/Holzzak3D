@@ -130,6 +130,8 @@ public partial class GameManager : MonoBehaviour
 
         bShake = false;
 
+        enemyMainIndex = 0;
+
         state = GameState.START;
 
         playerCharacter = PlayerCharacter.Commissar;
@@ -186,34 +188,43 @@ public partial class GameManager : MonoBehaviour
         }
     }
 
+    public void PluseEnemyMainCharacterIndex()
+    {
+        enemyMainIndex++;
+    }
+
     public void SetEnemyMainCharacter()
     {
-        switch (enemyCharacter)
+        switch (enemyMainIndex)
         {
             //enemyMainIndex --> 0 오크 , 1 파티, 2 가드, 3 마네퀸
-            case EnemyCharacter.Orks:
+            case 0:
                 enemyMainList[0].SetActive(true);
                 enemyMainList[1].SetActive(false);
                 enemyMainList[2].SetActive(false);
                 enemyMainList[3].SetActive(false);
+                enemyCharacter = EnemyCharacter.Orks;
                 break;
-            case EnemyCharacter.PartyMonster:
+            case 1:
                 enemyMainList[0].SetActive(false);
                 enemyMainList[1].SetActive(true);
                 enemyMainList[2].SetActive(false);
                 enemyMainList[3].SetActive(false);
+                enemyCharacter = EnemyCharacter.PartyMonster;
                 break;
-            case EnemyCharacter.Guard:
+            case 2:
                 enemyMainList[0].SetActive(false);
                 enemyMainList[1].SetActive(false);
                 enemyMainList[2].SetActive(true);
                 enemyMainList[3].SetActive(false);
+                enemyCharacter = EnemyCharacter.Guard;
                 break;
-            case EnemyCharacter.Mannequin:
+            case 3:
                 enemyMainList[0].SetActive(false);
                 enemyMainList[1].SetActive(false);
                 enemyMainList[2].SetActive(false);
                 enemyMainList[3].SetActive(true);
+                enemyCharacter = EnemyCharacter.Mannequin;
                 break;
         }
     }

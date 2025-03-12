@@ -13,7 +13,7 @@ public partial class GameManager : MonoBehaviour
         {
             if (enemyUnitSpawnLocation.Count >= enemyLimit)
             {
-                Instantiate(enemyUnitList[enemyListIndex], enemyUnitSpawnLocation[enemyLimit].transform.position, enemyUnitSpawnLocation[enemyLimit].transform.rotation);
+                Instantiate(enemyUnitList[enemyMainIndex], enemyUnitSpawnLocation[enemyLimit].transform.position, enemyUnitSpawnLocation[enemyLimit].transform.rotation);
                 enemyLimit++;
                 enemyCount++;
             }
