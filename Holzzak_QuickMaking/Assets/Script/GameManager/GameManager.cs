@@ -176,6 +176,7 @@ public partial class GameManager : MonoBehaviour
         enemyCount = 0;
         limit = 0;
         unitCount = 0;
+       
 
         if(health <= 0)
         {

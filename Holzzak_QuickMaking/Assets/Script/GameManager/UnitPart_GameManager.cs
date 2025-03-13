@@ -157,9 +157,14 @@ public partial class GameManager : MonoBehaviour
    
     public void SpawnKnightShield()
     {
-        int rand = Random.Range(1, 6);
-        Instantiate(knightShield, playerUnitSpawnLocation[rand].transform.position, playerUnitSpawnLocation[rand].transform.rotation);
+        knightShield.SetActive(true);
 
+        Invoke("DeActiveKnightShield", 2.0f);
+    }
+
+    public void DeActiveKnightShield()
+    {
+        knightShield.SetActive(false);
     }
 
 }
