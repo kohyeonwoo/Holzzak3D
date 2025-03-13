@@ -370,7 +370,7 @@ public partial class GameManager : MonoBehaviour
     {
         health = maxHealth;
         enemyHealth = enemyMaxHealth;
-        enemyMainIndex++;
+        //enemyMainIndex++;
         enemyListIndex++;
         HandleHp();
         EnemyHandleHP();
