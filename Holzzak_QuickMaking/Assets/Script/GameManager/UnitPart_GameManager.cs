@@ -159,7 +159,7 @@ public partial class GameManager : MonoBehaviour
     {
         knightShield.SetActive(true);
 
-        Invoke("DeActiveKnightShield", 2.0f);
+        Invoke("DeActiveKnightShield", 3.0f);
     }
 
     public void DeActiveKnightShield()
