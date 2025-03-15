@@ -365,6 +365,7 @@
 "Assets/Script/Enemy/Enemy.cs"
 "Assets/Script/Enemy/Enemy_Guard.cs"
 "Assets/Script/Enemy/Enemy_Mannequin.cs"
+"Assets/Script/Enemy/Enemy_Mannequin1.cs"
 "Assets/Script/Enemy/Enemy_Ork.cs"
 "Assets/Script/Enemy/Enemy_PartyMonster.cs"
 "Assets/Script/GameManager/EnemyUnitPart_GameManager.cs"

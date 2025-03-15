@@ -19,6 +19,10 @@ public partial class GameManager : MonoBehaviour
 
     public float maxHealth;
 
+    public int levelIndex;
+
+    public int abilityCount;
+
     public int cost = 5;
 
     public int limit = 0;
@@ -87,6 +91,8 @@ public partial class GameManager : MonoBehaviour
 
     public GameObject losePannel;
 
+    public GameObject lastPannel;
+
     public GameObject lowCostImage;
 
     public Slider healthBar;
@@ -132,6 +138,10 @@ public partial class GameManager : MonoBehaviour
 
         enemyMainIndex = 0;
 
+        abilityCount = 3;
+
+        levelIndex = 1;
+
         state = GameState.START;
 
         playerCharacter = PlayerCharacter.Commissar;
@@ -155,6 +165,13 @@ public partial class GameManager : MonoBehaviour
             lowCostImage.SetActive(false);
         }
 
+        if(levelIndex > 4)
+        {
+            winPannel.SetActive(false);
+            losePannel.SetActive(false);
+            lastPannel.SetActive(true);
+        }
+
     }
 
     public void BattleStart()
@@ -168,7 +185,17 @@ public partial class GameManager : MonoBehaviour
         
         bPlayerUnitMove = true;
         bEnemyUnitMove = true;
-        playerAbilityButton.SetActive(true);
+
+        if(abilityCount >= 3)
+        {
+            playerAbilityButton.SetActive(true);
+        }
+        else
+        {
+            playerAbilityButton.SetActive(false);
+            abilityCount++;
+        }
+       
         yield return new WaitForSeconds(3.0f);
         playerAbilityButton.SetActive(false);
         playerChooseButton.SetActive(true);
@@ -186,6 +213,7 @@ public partial class GameManager : MonoBehaviour
         if(enemyHealth <= 0)
         {
             winPannel.SetActive(true);
+            levelIndex++;
         }
     }
 
@@ -340,6 +368,7 @@ public partial class GameManager : MonoBehaviour
     public void CommissarAbility()
     {
         PlayerSpawnUnit();
+        abilityCount = 0;
     }
 
     public void MagicianAbility()
@@ -351,11 +380,15 @@ public partial class GameManager : MonoBehaviour
 
         health += point;
         HandleHp();
+
+        abilityCount = 0;
     }
 
     public void KnightAbility()
     {
         SpawnKnightShield();
+
+        abilityCount = 0;
     }
 
     public void HandleHp()
@@ -373,6 +406,7 @@ public partial class GameManager : MonoBehaviour
         enemyHealth = enemyMaxHealth;
         //enemyMainIndex++;
         enemyListIndex++;
+        abilityCount = 3;
         HandleHp();
         EnemyHandleHP();
         losePannel.SetActive(false);

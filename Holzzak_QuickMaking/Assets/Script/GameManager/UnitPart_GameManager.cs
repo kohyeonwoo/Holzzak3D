@@ -144,7 +144,7 @@ public partial class GameManager : MonoBehaviour
     public void PlayerSpawnSpecialUnit()
     {
         int rand = Random.Range(0, specialUnitList.Count);
-        int rand2 = Random.Range(0, 7);
+        int rand2 = Random.Range(0, playerUnitSpawnLocation.Count - 1);
 
         if (cost > 3)
         {

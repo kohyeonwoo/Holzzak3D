@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Mannequin : MonoBehaviour
+public class Enemy_Mannequin : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        this.transform.localRotation = Quaternion.Euler(0, -90, 0);
+
+        level = 1;
+        attackPoint = 1;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (GameManager.instance.bEnemyUnitMove == true)
+        {
+            MoveForward();
+        }
     }
 }
