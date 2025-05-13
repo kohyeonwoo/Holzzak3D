@@ -99,11 +99,6 @@ public class Unit : MonoBehaviour
             GameManager.instance.enemyHealth -= attackPoint;
             GameManager.instance.EnemyHandleHP();
 
-            if (GameManager.instance.cost <= 3)
-            {
-                GameManager.instance.cost++;
-            }
-
         }
 
         if (collision.gameObject.tag == "Enemy")
